@@ -68,7 +68,6 @@ void define_macro(const char *line)
     memset(&m, 0, sizeof(m));
     snprintf(m.name, sizeof(m.name), "%.*s", (int)(p - name_start), name_start);
 
-    /* A function-like macro has '(' immediately after its name. */
     if (*p == '(')
     {
         char *close;
